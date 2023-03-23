@@ -1,0 +1,63 @@
+\hypertarget{armrest_8h_source}{}\doxysection{armrest.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ ARMREST\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ ARMREST\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QtSql>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QSqlDatabase>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ "{}customerssql.h"{}}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00009\ }
+\DoxyCodeLine{00010\ QT\_BEGIN\_NAMESPACE}
+\DoxyCodeLine{00011\ \textcolor{keyword}{namespace\ }Ui\ \{\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_arm_rest}{ArmRest}};\ \}}
+\DoxyCodeLine{00012\ QT\_END\_NAMESPACE}
+\DoxyCodeLine{00013\ }
+\DoxyCodeLine{00014\ \textcolor{comment}{//\ Главный\ класс\ приложения,\ инкапсулирует\ всю\ логику\ работы}}
+\DoxyCodeLine{00015\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_arm_rest}{ArmRest}}\ :\ \textcolor{keyword}{public}\ QMainWindow}
+\DoxyCodeLine{00016\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ }
+\DoxyCodeLine{00019\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00020\ \ \ \ \ \textcolor{comment}{//\ Конструктор.\ Инициализирует\ графический\ интерфейс,\ начальные\ характеристики\ работы\ приложения\ и\ логику\ работы\ сигналов}}
+\DoxyCodeLine{00021\ \ \ \ \ \mbox{\hyperlink{class_arm_rest}{ArmRest}}(\textcolor{keywordtype}{int}\ \_codeRest,\ QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00022\ \ \ \ \ \textcolor{comment}{//\ Деструктор}}
+\DoxyCodeLine{00023\ \ \ \ \ \mbox{\hyperlink{class_arm_rest}{\string~ArmRest}}();}
+\DoxyCodeLine{00024\ }
+\DoxyCodeLine{00025\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{comment}{//\ Переход\ в\ режим\ "{}Посетители"{}}}
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ action\_triggered();}
+\DoxyCodeLine{00029\ \ \ \ \ \textcolor{comment}{//\ Переход\ на\ главную\ страницу}}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keywordtype}{void}\ mainInfo();}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{comment}{//\ Поиск\ клиента\ по\ Фамилии}}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{void}\ findCustomersByName();}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{comment}{//\ Обработка\ двойного\ нажатия\ на\ таблицы}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ doubleClickHandler(\textcolor{keyword}{const}\ QModelIndex\ \&ind);}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{comment}{//\ Добавление\ посетителя}}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ addCustButton\_clicked();}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{comment}{//\ Изменение\ посетителя}}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{void}\ changeCustButton\_clicked();}
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{comment}{//\ Удаление\ посетителя}}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ deleteCustButton\_clicked();}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{comment}{//\ Добавить\ информацию}}
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ addInfo();}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{comment}{//\ Получить\ информацию}}
+\DoxyCodeLine{00044\ \ \ \ \ \textcolor{keywordtype}{void}\ getInfo();}
+\DoxyCodeLine{00045\ }
+\DoxyCodeLine{00046\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00047\ \ \ \ \ \textcolor{comment}{//\ \ Хранит\ указатель\ на\ объект\ класса\ для\ работы\ с\ графическим\ интерфейсом}}
+\DoxyCodeLine{00048\ \ \ \ \ Ui::ArmRest\ *ui;}
+\DoxyCodeLine{00049\ \ \ \ \ \textcolor{comment}{//\ Хранит\ указатель\ на\ модель\ таблицы}}
+\DoxyCodeLine{00050\ \ \ \ \ QSqlQueryModel\ *model;}
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{comment}{//\ Хранит\ индекс\ рассматриваемого\ объекта\ (если\ создается\ новый\ объект\ =\ -\/1)}}
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{int}\ currentInd\ =\ -\/1;}
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{comment}{//\ Хранит\ код\ ресторана,\ к\ которому\ принадлежит\ работающий\ пользователь}}
+\DoxyCodeLine{00054\ \ \ \ \ \textcolor{keywordtype}{int}\ codeRest;}
+\DoxyCodeLine{00055\ \ \ \ \ \textcolor{comment}{//\ Демонстрирует\ данные\ по\ всем\ посетителям}}
+\DoxyCodeLine{00056\ \ \ \ \ \textcolor{keywordtype}{void}\ showCustomer();}
+\DoxyCodeLine{00057\ \};}
+\DoxyCodeLine{00058\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ ARMREST\_H}}
+
+\end{DoxyCode}
