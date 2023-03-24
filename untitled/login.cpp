@@ -43,7 +43,7 @@ void Login::loginButton_clicked()
             close();
             qDebug() << request.value(0).toInt();
             arm = new ArmRest(request.value(0).toInt(), this);
-            arm->setWindowTitle("АРМ");
+            arm->setWindowTitle("Автоматизированное рабочее место");
             arm->show();
         }
         else {
